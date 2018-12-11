@@ -8,7 +8,7 @@ namespace ComplexVendingMachine
 {
     public class DrinkMachine
     {
-        const int COST_OF_DRINK = 150;
+        const int COST_OF_DRINK = 15;
         public int RunningTotal { get; set; }
 
         public DrinkMachine()
@@ -65,17 +65,17 @@ namespace ComplexVendingMachine
                 switch (selection)
                 {
                     case 'C':
-                        Console.WriteLine("Thankyou for choosing a Coke");
-                        ReturnChange();
+                        Console.WriteLine("Thankyou for choosing Coke");
                         selectionOK = true;
+                        ReturnChange();
                         break;
                     case 'P':
-                        Console.WriteLine("Thankyou for choosing a Pepsi");
+                        Console.WriteLine("Thankyou for choosing Pepsi");
                         selectionOK = true;
                         ReturnChange();
                         break;
                     case 'F':
-                        Console.WriteLine("Thankyou for choosing a Fanta");
+                        Console.WriteLine("Thankyou for choosing Fanta");
                         selectionOK = true;
                         ReturnChange();
                         break;
@@ -92,7 +92,7 @@ namespace ComplexVendingMachine
         {
             if (RunningTotal > COST_OF_DRINK)
             {
-                Console.WriteLine("Your change is {0:C}", (RunningTotal - COST_OF_DRINK) * 0.01);
+                Console.WriteLine("Your change is {0:C}", (RunningTotal - COST_OF_DRINK) * 0.1);
 
             }
         }
